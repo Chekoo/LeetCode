@@ -16,8 +16,13 @@ class Solution(object):
         for i, num in enumerate(nums):
             if num not in check:
                 check[target-num] = i
+                print i, num, check
             else:
+                print i, num, check
                 return [check[num], i]
+# enumerate可以用来遍历一个列表，即遍历索引又遍历元素,z
 
-# enumerate可以用来遍历一个列表，即遍历索引又遍历元素。
+if __name__ == "__main__":
+    a = Solution()
+    print a.twoSum((3, 2, 1, 5, 6), 6)
 
